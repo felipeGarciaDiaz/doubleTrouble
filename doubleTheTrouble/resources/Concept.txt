@@ -1,0 +1,3 @@
+Two different worlds:
+	In one game.
+	Worlds change sizes and character moves like in sputy, your goal is to move the sprites so that both of them stay on the platform and don't fall of.

@@ -1,0 +1,83 @@
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8" />
+        
+        <title>Double Trouble</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="./libs/phaser.js"></script>
+
+
+
+    </head>
+
+
+
+    <body>
+
+
+        <div id="menu">
+
+                <div class="col s12" id="selection">
+                   <h1 class="center-align"> <img width="80%" height="80%" class="responsive-img" id="title" src="/resources/images/Title.png" /></h1>
+                    <h4 class="center-align" id="start_game">Start ></h4>
+                    <h4 class="center-align" id="show_score">Highscore ></h4>
+                    <h4 class="center-align" id="Music">Music: ON </h4>
+                    <br />
+                </div>
+        </div>
+
+
+
+        <div id="highscoreMenu">
+            <div class="col s3"></div>
+            <div class="col s6" id="selection">
+                <h1 class="center-align"> <img class='responsive-img' src='/resources/images/highscore.png' /></h1>
+                <h3 id='yourscore' class='center-align'> 0<small>pts</small></h3>
+                <h1 id='space'>
+                <h3 class="center-align" id='goHome'>&lt;</h3>
+            </div>
+            <div class="col s3"></div>
+        </div>
+
+        <div id="tutorial">
+            <h1 class="center-align"> <img class='responsive-img' src='/resources/images/tutorial.png' /></h1>
+                        <br />
+
+            <h6 class='center-align'> Will you be the next double trouble champion?</h6>
+            <form>
+
+            </form method="post" name="/addNickname">
+               <h1 class="center-align"> <input id="pickName" class="center-align" type='text' name='pickName' placeholder='Nickname' required> </h1>
+                <h1 class='center-align'><input id='rea2dy' value=" Ready >" type='submit'></h1>               
+            </form>
+        </div>
+
+        <div id="master"></div>
+        <div id="game">
+        
+            <div >
+                <h2 class='center-align' id='suggestion'>For the best experience turn phone sideways <br /> <span class="material-icons">stay_primary_landscape</span></h2>
+            </div>
+            <div id="touchRight"> </div>
+            <div id="touchLeft"> </div>
+        </div> 
+
+
+
+
+        <div id="restart">
+        </div>
+
+
+
+    </body>
+
+
+
+    <script src="./src/game.js"></script>
+
+</html>
