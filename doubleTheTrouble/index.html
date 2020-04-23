@@ -6,9 +6,10 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-
-        <script src="./libs/phaser.js"></script>
+        <link rel="stylesheet" href="/style.css">
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./lib/phaser.js"></script>
 
 
 
@@ -36,24 +37,34 @@
             <div class="col s3"></div>
             <div class="col s6" id="selection">
                 <h1 class="center-align"> <img class='responsive-img' src='/resources/images/highscore.png' /></h1>
-                <h3 id='yourscore' class='center-align'> 0<small>pts</small></h3>
+                <h2 id='yourscore' class='center-align'> 0<small>pts</small></h2>
+
+                <h3 class="center-align" id='goHome' name="back" >&lt;</h3>
+
+                <h2 id="topTitle" class="center-align">Top players</h2>
+
+                    <h2 id='topscore' class='center-align'><h2>
                 <h1 id='space'>
-                <h3 class="center-align" id='goHome'>&lt;</h3>
+
+
             </div>
             <div class="col s3"></div>
         </div>
 
-        <div id="tutorial">
+        <div id="playerChooseName">
             <h1 class="center-align"> <img class='responsive-img' src='/resources/images/tutorial.png' /></h1>
                         <br />
 
             <h6 class='center-align'> Will you be the next double trouble champion?</h6>
-            <form>
+            
+            <p class="center-align" id="nameNotice">This nickname is used by another player</p>
 
-            </form method="post" name="/addNickname">
-               <h1 class="center-align"> <input id="pickName" class="center-align" type='text' name='pickName' placeholder='Nickname' required> </h1>
+            <form onsubmit="addPlayer()" target="dummyframe" action="src">
+               <h1 class="center-align"> <input id="pickName" class="center-align" type='text' placeholder='Nickname' required> </h1>
                 <h1 class='center-align'><input id='rea2dy' value=" Ready >" type='submit'></h1>               
             </form>
+            <iframe name="dummyframe" id="dummyframe" src="src" style="display:none"></iframe>
+
         </div>
 
         <div id="master"></div>
